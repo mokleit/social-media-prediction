@@ -36,7 +36,8 @@ class Trainer:
         rmsle = np.sqrt(mean_squared_log_error(np.exp(self.y_test), y_predicted))
         print("The RMSLE on the test set is ", rmsle)
 
-    def save(self, predictor, best_params, cv_score, params_name, pickle_name):
+    @staticmethod
+    def save(predictor, best_params, cv_score, params_name, pickle_name):
         params_path = 'parameters/' + params_name
         pickle_path = 'estimators/' + pickle_name
         with open(params_path, 'w') as f:

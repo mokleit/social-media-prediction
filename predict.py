@@ -8,9 +8,9 @@ PREDICTIONS_PATH = 'predictions/'
 MODEL = 'lgbm'
 
 models = {
-    'lasso': MODEL_PATH+'lasso.pkl',
-    'lgbm': MODEL_PATH+'lgbm.pkl',
-    'xgb': MODEL_PATH+'xgb.pkl'
+    'lasso': MODEL_PATH + 'lasso.pkl',
+    'lgbm': MODEL_PATH + 'lgbm.pkl',
+    'xgb': MODEL_PATH + 'xgb.pkl'
 }
 
 # Load data

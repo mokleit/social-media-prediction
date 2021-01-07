@@ -1,0 +1,2 @@
+{'alpha': 0.001, 'fit_intercept': True, 'max_iter': 100, 'positive': False, 'selection': 'cyclic', 'tol': 0.0001}
+-1.6294411357855427

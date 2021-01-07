@@ -1,0 +1,2 @@
+{'colsample_bytree': 0.5, 'learning_rate': 0.01, 'max_depth': 10, 'min_child_weight': 0.01, 'n_estimators': 750, 'num_leaves': 30}
+-2.3712878668649235

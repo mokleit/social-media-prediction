@@ -5,6 +5,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 MODEL_PATH = 'training/estimators/'
 PREDICTIONS_PATH = 'predictions/'
+MODEL = 'lgbm'
 
 models = {
     'lasso': MODEL_PATH+'lasso.pkl',
@@ -18,11 +19,10 @@ Id = data['Id']
 X = MinMaxScaler().fit_transform(data.drop(['Id'], axis=1))
 
 # Load model
-name = 'lgbm'
-model = pickle.load(open(models[name], 'rb'))
+model = pickle.load(open(models[MODEL], 'rb'))
 
 # Predict
 predictions = np.exp(model.predict(X))
 submission = pd.DataFrame({'Id': Id, 'Predicted': predictions})
-submission.to_csv(PREDICTIONS_PATH + name + "_predictions.csv", index=False)
-print("Submissions saved at", PREDICTIONS_PATH + name + "_predictions.csv")
+submission.to_csv(PREDICTIONS_PATH + MODEL + "_predictions.csv", index=False)
+print("Submissions saved at", PREDICTIONS_PATH + MODEL + "_predictions.csv")
